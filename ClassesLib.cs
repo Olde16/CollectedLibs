@@ -4,8 +4,8 @@ namespace CollectedLibs
 {
     public class LibInfo
     {
-        public string version = "v0.0.3";
-        public uint versionInt = 3;
+        public string version = "v0.0.5";
+        public uint versionInt = 5;
         public string[] contributors = { "Olde16 : Ole Taege" };
         public bool original = true;
     }
@@ -298,7 +298,7 @@ namespace CollectedLibs
                 this.lastLogin = lastLogin;
                 this.storage = storage;
             }
-            public Customer(uint UID, string cust_id,  string name, string lastName)
+            public Customer(uint UID, string cust_id, string name, string lastName)
             {
                 this.UID = UID;
                 this.cust_id = cust_id;
@@ -430,42 +430,15 @@ namespace CollectedLibs
                 this.lastLogin = lastLogin;
                 this.storage = storage;
             }
-            public string get_Name()
-            {
-                return this.name;
-            }
-            public string get_lastName()
-            {
-                return this.lastName;
-            }
+            
             public string get_fullName()
             {
                 return this.name + " " + this.lastName;
             }
-            public double get_age()
-            {
-                return this.age;
-            }
             public int get_normalisedAge()
             {
                 if (this.age == double.NaN || this.age == double.NegativeInfinity || this.age == double.PositiveInfinity) return 0;
-                return (int) Math.Floor(this.age);
-            }
-            public string get_street()
-            {
-                return this.address_street;
-            }
-            public string get_number()
-            {
-                return this.address_number;
-            }
-            public string get_state()
-            {
-                return this.address_state;
-            }
-            public string get_country()
-            {
-                return this.address_country;
+                return (int)Math.Floor(this.age);
             }
             public string get_fullAddress()
             {
